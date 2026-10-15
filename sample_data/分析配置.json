@@ -1,0 +1,27 @@
+{
+  "analysis": {
+    "conf": 0.95,
+    "k": 2.0,
+    "outlier_method": "grubbs",
+    "outlier_alpha": 0.05,
+    "exclude_outliers": true,
+    "align_method": "nearest",
+    "fit": true
+  },
+  "derived": [
+    {
+      "name": "线膨胀系数 alpha",
+      "label": "alpha",
+      "formula": "slope / L0",
+      "unit": "1/℃",
+      "fit_source": "reference",
+      "vars": {
+        "L0": {
+          "value": 1000.0,
+          "u": 0.05,
+          "dof": 50
+        }
+      }
+    }
+  ]
+}
